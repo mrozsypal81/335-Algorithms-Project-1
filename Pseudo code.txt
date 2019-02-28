@@ -1,0 +1,29 @@
+left-to-right algorithm
+
+// K is the array or datastructure that is storing the disks
+for each element from n to K's size -1
+	for each element from n to K's size -1
+		if(element at n does not equal element at n+1)
+			swap element n and n+1
+return K
+
+lawnmower algorithm
+
+bool direction = true;  //true is go right, false is go left
+for each element from n to K's size-1{
+	if( direction == true){
+		for each element from n to K's size-1
+			if(element at n does not equal element at n+1)
+			swap element n and n+1
+	direction = false;
+	n increment
+	}
+	if(direction == false){
+		for each element from K's size-n-1 to n //decreasing
+			if(element at m does not equal element at m-1)
+			swap element m and m-1
+	direction = true;
+	n increment
+	}
+}
+return K
